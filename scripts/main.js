@@ -306,6 +306,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   resetErrors();
 
   let isValid = true;
+
   if (!validInputSize(firstName)) {
     document.getElementById("fnameError").innerText =
       "Input must be between 2 and 50 characters long.";
@@ -341,6 +342,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
       "Input must be between 2 and 50 characters long.";
     isValid = false;
   }
+
   if (isValid) {
     localStorage.setItem("first-name", firstName);
     localStorage.setItem("last-name", lastName);
